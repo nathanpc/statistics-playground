@@ -1,0 +1,11 @@
+# Major projects.
+Battery-Capacity/
+electronics-octave/
+electronics-r/
+exchange-rate/
+plotcsv/
+
+# R Stuff.
+.RData
+.Rhistory
+

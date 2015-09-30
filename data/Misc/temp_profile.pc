@@ -1,0 +1,12 @@
+# Load CSV.
+load data/Power12-Oct6.csv
+
+# Setup plotting stuff.
+legend on
+xlabel Time (s)
+ylabel Temperature (C)
+gp set grid
+
+# Plot
+plot 2 Heatsink
+plot 3 Ambient

@@ -1,0 +1,11 @@
+# Load CSV.
+load Proto-Power-Bank-Battery-Discharge.csv
+
+# Setup plotting stuff.
+legend on
+xlabel Time (s)
+ylabel Voltage (V)
+gp set grid
+
+# Plot
+plot 2 Battery

@@ -1,0 +1,8 @@
+# Setup plotting stuff.
+legend on
+xlabel Time (s)
+ylabel Voltage (V)
+gp set grid
+
+# Plot
+#plot 2 Battery
