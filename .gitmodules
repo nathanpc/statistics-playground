@@ -1,0 +1,3 @@
+[submodule "projects/battery-capacity"]
+	path = projects/battery-capacity
+	url = git@github.com:nathanpc/battery-capacity.git
