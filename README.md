@@ -8,7 +8,7 @@ calculations I have to do.
 
 ## License
 
-This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0
+Unless otherwise noted, this work is licensed under a [Creative Commons Attribution-ShareAlike 4.0
 International License][cc-by-sa].
 
 [![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
