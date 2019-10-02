@@ -1,0 +1,329 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9613,        321]
+NotebookOptionsPosition[      8001,        262]
+NotebookOutlinePosition[      8344,        277]
+CellTagsIndexPosition[      8301,        274]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Wave Length", "Title",
+ CellChangeTimes->{{3.7055935287102323`*^9, 3.705593552018005*^9}}],
+
+Cell["\<\
+This is a simple tool to calculate the wave length for any desired frequency. \
+Very useful for building antennas!\
+\>", "Subtitle",
+ CellChangeTimes->{{3.705593565416298*^9, 3.70559359785137*^9}}],
+
+Cell["\<\
+First we need to define the value for the speed of light, which is very \
+important to calculate the wave length.\
+\>", "Text",
+ CellChangeTimes->{{3.7055939947955103`*^9, 3.7055940218004932`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sol", "=", "299.792458"}], ";"}]], "Input",
+ CellChangeTimes->{{3.7055823058136854`*^9, 3.70558234387673*^9}, {
+   3.70558244709778*^9, 3.7055824539266095`*^9}, {3.705582505026598*^9, 
+   3.7055825966392736`*^9}, {3.7055932966727734`*^9, 
+   3.7055932978529606`*^9}, {3.705593718772264*^9, 3.705593735371518*^9}, 
+   3.7055943651197195`*^9, 3.7055948132620344`*^9}],
+
+Cell["\<\
+We need some important parameters before we start calculating the wave length \
+so please let us know the frequency (in MHz) and the velocity factor of your \
+conductor:\
+\>", "Text",
+ CellChangeTimes->{{3.7055938836092825`*^9, 3.7055939792820673`*^9}, {
+  3.705594262724947*^9, 3.705594262981871*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", ":=", "147"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vf", ":=", "1"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7055942505539474`*^9, 3.7055942570411887`*^9}, {
+  3.7055943033676395`*^9, 3.705594303781238*^9}, {3.7055947567747154`*^9, 
+  3.7055947800589457`*^9}, {3.7055948209908314`*^9, 3.705594882625386*^9}, {
+  3.7055949644299464`*^9, 3.7055949885058193`*^9}, {3.705595073400137*^9, 
+  3.705595073676738*^9}, {3.705595165684375*^9, 3.7055951961568923`*^9}}],
+
+Cell[TextData[{
+ "We plug these values into the formula for the wave length ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Lambda]", "=", 
+    FractionBox[
+     RowBox[{"299.792458", "\[Times]", 
+      SubscriptBox["v", "f"]}], "f"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and we get the result in meters:"
+}], "Text",
+ CellChangeTimes->{{3.7055943128207397`*^9, 3.7055943267060895`*^9}, {
+  3.705594375528941*^9, 3.7055944120994806`*^9}, {3.7055945267887387`*^9, 
+  3.705594569161174*^9}, {3.705594613696765*^9, 3.7055947458974643`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"\[Lambda]", ":=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"sol", "*", "vf"}], ")"}], "/", 
+   "f"}]}], "\[IndentingNewLine]", "\[Lambda]"}], "Input",
+ CellChangeTimes->{{3.7055950791809053`*^9, 3.7055950852635612`*^9}, {
+  3.7055951487401915`*^9, 3.7055951847473574`*^9}}],
+
+Cell[BoxData["2.039404476190476`"], "Output",
+ CellChangeTimes->{3.705595210730912*^9}]
+}, {2}]],
+
+Cell["Now for the most common dimensions we use in antenna design.", "Text",
+ CellChangeTimes->{{3.7055952602586966`*^9, 3.7055953180332575`*^9}, {
+  3.7055954609157467`*^9, 3.705595483410691*^9}}],
+
+Cell[TextData[{
+ "Let\[CloseCurlyQuote]s start with the ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[Lambda]", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.7055954888987703`*^9, 3.705595547391997*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[Lambda]", "/", "2"}]], "Input",
+ CellChangeTimes->{{3.705595337271723*^9, 3.705595448043017*^9}, {
+  3.705595552073888*^9, 3.705595552538291*^9}}],
+
+Cell[BoxData["1.019702238095238`"], "Output",
+ CellChangeTimes->{{3.705595379246374*^9, 3.705595400580042*^9}, 
+   3.70559545000721*^9, 3.7055955533481503`*^9}]
+}, {2}]],
+
+Cell[TextData[{
+ "Another useful one is ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[Lambda]", "4"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.7055955603897295`*^9, 3.705595617639221*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[Lambda]", "/", "4"}]], "Input",
+ CellChangeTimes->{{3.7055956225161314`*^9, 3.7055956250362606`*^9}}],
+
+Cell[BoxData["0.509851119047619`"], "Output",
+ CellChangeTimes->{3.7055956269525876`*^9}]
+}, {2}]],
+
+Cell[TextData[{
+ "Now for the great ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"5", "\[Lambda]"}], "8"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.7055956353074265`*^9, 3.7055956768011427`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"5", "*", 
+  RowBox[{"\[Lambda]", "/", "8"}]}]], "Input",
+ CellChangeTimes->{{3.7055956810552225`*^9, 3.7055956911886387`*^9}}],
+
+Cell[BoxData["1.2746277976190477`"], "Output",
+ CellChangeTimes->{3.7055956925867443`*^9}]
+}, {2}]],
+
+Cell["\<\
+This is all good for various things, but if we want to build something like a \
+ground plane antenna we need the size of the radials, which is a function of \
+the angle they are in. The recommended value is usually 45\[Degree], so with \
+this in mind the size of the radials are as follows for the different wave \
+lengths.\
+\>", "Text",
+ CellChangeTimes->{{3.7055957078401237`*^9, 3.705595721849293*^9}, {
+  3.7055957623871336`*^9, 3.7055958727047853`*^9}}],
+
+Cell[TextData[{
+ "For ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[Lambda]", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " radials at 45",
+ "\[Degree]:"
+}], "Text",
+ CellChangeTimes->{{3.7055959753143187`*^9, 3.7055960240416946`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"\[Lambda]", "/", "2"}], ")"}], "/", 
+  RowBox[{"Cos", "[", 
+   RowBox[{"45", "Degree"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7055960284990864`*^9, 3.7055960990524435`*^9}, {
+  3.70559636088173*^9, 3.705596361561041*^9}}],
+
+Cell[BoxData["1.4420767346964847`"], "Output",
+ CellChangeTimes->{{3.705596081086239*^9, 3.7055961002760115`*^9}, 
+   3.705596362272951*^9}]
+}, {2}]],
+
+Cell[TextData[{
+ "For ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[Lambda]", "4"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " radials at 45\[Degree]:"
+}], "Text",
+ CellChangeTimes->{{3.7055961999629183`*^9, 3.705596229665741*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"\[Lambda]", "/", "4"}], ")"}], "/", 
+  RowBox[{"Cos", "[", 
+   RowBox[{"45", "Degree"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.705596233841393*^9, 3.7055962482932844`*^9}, {
+  3.7055963517031393`*^9, 3.705596353209961*^9}}],
+
+Cell[BoxData["0.7210383673482423`"], "Output",
+ CellChangeTimes->{3.7055962496582613`*^9, 3.7055963550723896`*^9}]
+}, {2}]],
+
+Cell[TextData[{
+ "For ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"5", "\[Lambda]"}], "8"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " radials at 45",
+ "\[Degree]:"
+}], "Text",
+ CellChangeTimes->{{3.705596382749864*^9, 3.7055964097956576`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"5", "*", 
+    RowBox[{"\[Lambda]", "/", "8"}]}], ")"}], "/", 
+  RowBox[{"Cos", "[", 
+   RowBox[{"45", "Degree"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7055964137687783`*^9, 3.705596436029271*^9}}],
+
+Cell[BoxData["1.802595918370606`"], "Output",
+ CellChangeTimes->{3.705596437405627*^9}]
+}, {2}]],
+
+Cell["\<\
+So this is all we have! With this information you can easily build your own \
+antennas and have tons of fun on the air!\
+\>", "Text",
+ CellChangeTimes->{{3.705596447513833*^9, 3.705596470212799*^9}}],
+
+Cell["73 PU1CPS", "Text",
+ CellChangeTimes->{{3.705596480499996*^9, 3.7055964837167783`*^9}}]
+}, Open  ]]
+},
+WindowSize->{759, 833},
+WindowMargins->{{Automatic, 48}, {Automatic, 65}},
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 96, 1, 90, "Title"],
+Cell[679, 25, 207, 4, 77, "Subtitle"],
+Cell[889, 31, 207, 4, 49, "Text"],
+Cell[1099, 37, 400, 7, 31, "Input"],
+Cell[1502, 46, 312, 6, 49, "Text"],
+Cell[1817, 54, 514, 9, 52, "Input"],
+Cell[2334, 65, 553, 13, 62, "Text"],
+Cell[CellGroupData[{
+Cell[2912, 82, 298, 7, 52, InheritFromParent],
+Cell[3213, 91, 87, 1, 31, "Output"]
+}, {2}]],
+Cell[3312, 95, 197, 2, 30, "Text"],
+Cell[3512, 99, 256, 8, 43, "Text"],
+Cell[CellGroupData[{
+Cell[3793, 111, 172, 3, 31, "Input"],
+Cell[3968, 116, 160, 2, 31, "Output"]
+}, {2}]],
+Cell[4140, 121, 240, 8, 43, "Text"],
+Cell[CellGroupData[{
+Cell[4405, 133, 127, 2, 31, "Input"],
+Cell[4535, 137, 89, 1, 31, "Output"]
+}, {2}]],
+Cell[4636, 141, 258, 9, 43, "Text"],
+Cell[CellGroupData[{
+Cell[4919, 154, 150, 3, 31, "Input"],
+Cell[5072, 159, 90, 1, 31, "Output"]
+}, {2}]],
+Cell[5174, 163, 468, 8, 68, "Text"],
+Cell[5645, 173, 252, 9, 43, "Text"],
+Cell[CellGroupData[{
+Cell[5922, 186, 277, 7, 31, "Input"],
+Cell[6202, 195, 140, 2, 31, "Output"]
+}, {2}]],
+Cell[6354, 200, 245, 8, 43, "Text"],
+Cell[CellGroupData[{
+Cell[6624, 212, 278, 7, 31, "Input"],
+Cell[6905, 221, 114, 1, 31, "Output"]
+}, {2}]],
+Cell[7031, 225, 270, 10, 43, "Text"],
+Cell[CellGroupData[{
+Cell[7326, 239, 252, 7, 31, "Input"],
+Cell[7581, 248, 87, 1, 31, "Output"]
+}, {2}]],
+Cell[7680, 252, 209, 4, 49, "Text"],
+Cell[7892, 258, 93, 1, 30, "Text"]
+}, Open  ]]
+}
+]
+*)
+
