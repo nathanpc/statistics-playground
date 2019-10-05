@@ -17,7 +17,7 @@ use DateTime::Format::ISO8601;
 sub parse_raw_csv {
 	my ($fname) = @_;
 	my @entries;
-	
+
 	# Open input file.
 	open(my $file, '<:encoding(UTF-8)', $fname);
 
@@ -46,7 +46,7 @@ sub parse_raw_csv {
 		my $delivered = DateTime::Format::ISO8601->parse_datetime($row{delivered});
 		my $delta = $shipped->delta_days($delivered);
 		$row{wait_period} = $delta->in_units("days");
-		
+
 		# TODO: Check if any key is undef and show errors.
 
 		push @entries, \%row;
@@ -106,7 +106,7 @@ sub main {
 	# Check if the import data flag is set.
 	if ($import_data) {
 		print "Importing data...\n";
-		
+
 		# Check if we have some kind of data to import.
 		if (!($import_fn eq "")) {
 			# Raw data.
@@ -120,7 +120,7 @@ sub main {
 			print "Appending data to database... ";
 			populate_db($dbh, \@entries);
 			print colored("OK", "green") . "\n";
-			
+
 			return;
 		} else {
 			# Nothing to import, show usage.
@@ -177,4 +177,3 @@ Nathan Campos <nathanpc@dreamintech.net>
 Copyright (c) 2019 Nathan Campos.
 
 =cut
-
