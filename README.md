@@ -14,9 +14,9 @@ are not quick hacks just to find an answer.
 
 Here are my main projects that you can find in this repository:
 
-  - [battery-capacity](projects/battery-capacity): Some measurements I did to
-    accurately measure the true capacity of a bunch of batteries and brands
-	(from AAA to 9V to lithium cells).
+  - [battery-capacity](https://github.com/nathanpc/battery-capacity): Some
+    measurements I did to accurately measure the true capacity of a bunch of
+	batteries and brands (from AAA to 9V to lithium cells).
   - [package-wait](projects/package-wait): Analysis of the wait periods between
     a package being handed over to the carrier and it actually arriving. Used to
 	determine the best carriers for each country.
