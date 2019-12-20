@@ -66,12 +66,12 @@ main <- function () {
     graph <- ggplot(df, aes(x = wait_period, color = carrier, fill = carrier))
     graph <- graph + geom_density(alpha = 0.5)
     graph <- graph + labs(title = "Package Wait Period from China",
-                         subtitle = "How long do you have to wait for a package to arrive?",
-                         x = "Wait Period (Days)",
-                         y = "Density",
-                         fill = "Carriers",
-                         color = "Carriers",
-                         caption = "Data and Visualization by Nathan Campos (@nathanpc)")
+                          subtitle = "How long do you have to wait for a package to arrive?",
+                          x = "Wait Period (Days)",
+                          y = "Density",
+                          fill = "Carriers",
+                          color = "Carriers",
+                          caption = "Data and Visualization by Nathan Campos (@nathanpc)")
     graph <- graph + theme(legend.position = "bottom")
     graph <- graph + expand_limits(x = 0, y = 0)
     print(graph)
