@@ -39,6 +39,16 @@ country_data <- function (conn, country) {
     return(data)
 }
 
+#' Exports the plot to a PDF file.
+#'
+#' @param graph ggplot2 graph object.
+#' @param fn    Output PDF filename.
+export_plot <- function (graph, fn) {
+    pdf(fn)
+    print(graph)
+    dev.off()
+}
+
 #' The script main entry point.
 main <- function () {
     # Connect to database.
